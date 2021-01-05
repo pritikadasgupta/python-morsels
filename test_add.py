@@ -33,7 +33,7 @@ class AddTests(unittest.TestCase):
         self.assertEqual(m2, m2_original)
 
     # To test the Bonus part of this exercise, comment out the following line
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_any_number_of_matrixes(self):
         m1 = [[6, 6], [3, 1]]
         m2 = [[1, 2], [3, 4]]

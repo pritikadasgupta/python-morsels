@@ -1,11 +1,13 @@
 #!/bin/python3
 
-def add(m1,m2):
-	'''accepts two lists-of-lists of numbers and 
-	returns one list-of-lists with each of the 
-	corresponding numbers in the two given 
-	lists-of-lists added together'''
-	return [
-		[n + m for n, m in zip(row1, row2)]
-		for row1, row2 in zip(m1, m2)
-	]
+def add(*mats):
+	mat3 = []
+	for rows in zip(*mats):
+		row=[]
+		for values in zip(*rows):
+			total = 0
+			for n in values:
+				total += n
+			row.append(total)
+		mat3.append(row)
+	return(mat3)
