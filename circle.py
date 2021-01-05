@@ -8,5 +8,4 @@ class Circle():
 		self.diameter = radius*2
 		self.area = (math.pi)*(radius**2)
 	def __repr__(self):
-		result = "Circle({})".format(self.radius)
-		return(result)
+		return("Circle({:.0f})".format(self.radius))
