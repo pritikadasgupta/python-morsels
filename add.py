@@ -5,10 +5,7 @@ def add(m1,m2):
 	returns one list-of-lists with each of the 
 	corresponding numbers in the two given 
 	lists-of-lists added together'''
-	mat3 = []
-	for row1, row2 in zip(m1, m2):
-		mat3.append([
-        	n + m
-        	for n, m in zip(row1, row2)
-        ])
-	return(mat3)
+	return [
+		[n + m for n, m in zip(row1, row2)]
+		for row1, row2 in zip(m1, m2)
+	]
