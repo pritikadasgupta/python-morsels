@@ -7,6 +7,8 @@ def add(m1,m2):
 	lists-of-lists added together'''
 	mat3 = []
 	for row1, row2 in zip(m1, m2):
-		row = [n+m for n, m in zip(row1, row2)]
-		mat3.append(row)
+		mat3.append([
+        	n + m
+        	for n, m in zip(row1, row2)
+        ])
 	return(mat3)
